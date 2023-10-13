@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
+import { render, fireEvent, act } from '@testing-library/react-native';
 import HomeNavigator from './';
 import configureStore from 'redux-mock-store'; 
 import { Provider } from 'react-redux';
@@ -25,8 +25,9 @@ describe('HomeNavigator', () => {
                                 </Provider>);
     const matchingHomeScreenElements = getAllByText('Home Screen');
     expect(matchingHomeScreenElements.length).toBe(2);
-    
+    act(() => {
     fireEvent.press(getByText('Cart Screen'));
+    });
     const matchingCartScreenElements = getAllByText('Cart Screen');
     expect(matchingCartScreenElements.length).toBe(2);
   });
