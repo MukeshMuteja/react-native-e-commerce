@@ -1,0 +1,1 @@
+export const PRODUCT_API = 'https://my-json-server.typicode.com/benirvingplt/products/products'
