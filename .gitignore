@@ -1,0 +1,97 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+**/node_modules
+yarn.lock
+package-lock.json
+
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/connect.lock
+/coverage
+**/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+report.*.json
+
+## Xcode
+
+**/ios/**/build/
+**/ios/**/*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+## Android
+
+**/android/**/build/
+**/android/**/.gradle
+**/android/**/local.properties
+**/android/**/*.iml
+**/android/*.hprof
+
+## BUCK
+
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+
+## Bundle artifact
+*.jsbundle
+
+## CocoaPods
+**/ios/Pods/
+/
+/apps/bajaj/my-chetak/android/.idea/
+/apps/bajaj/intracity/android/.idea/
+/apps/bajaj/eu-chetak/android/.idea/
+
+##Test Automation
+test/.tsbuild
+test/_results_
+test/allure-report/
+allure-report/
+test/node_modules
+test/test/apps/my_chetak/resources/appChetak.apk
+test/test/apps/my_chetak/resources/*
+test/allure-results
