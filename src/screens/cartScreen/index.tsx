@@ -6,6 +6,7 @@ import { addIncrementCount, decrementCount } from "../../store/cartReducer";
 import { CartList } from "../../components/organism/cartList";
 import { cartProductSelector } from "../../store/selector/cartSelector";
 import styled from "styled-components/native";
+import { CartTotal } from "../../components/molecule/cartTotal";
 
 const StyledContainer = styled.View`
   background-color: #D3D3D3;
@@ -22,10 +23,15 @@ export const CartScreen = () => {
 
     const products = useSelector(cartProductSelector)
 
+    const onPlaceOrderClicked = () => {
+      //Place Order Code here
+    }
+
     return <StyledContainer >
                 <CartList items={products} 
                     onDecrementProduct={(product)=> AppDispatch(decrementCount(product))}
                     onIncrementProduct={(product)=> AppDispatch(addIncrementCount(product))}
                 />
+                <CartTotal products={products} onPlaceOrderClicked={onPlaceOrderClicked}/>
             </StyledContainer>
 }

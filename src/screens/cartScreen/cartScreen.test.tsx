@@ -6,6 +6,7 @@ import { CartScreen } from './';
 import { addIncrementCount, decrementCount } from "../../store/cartReducer";
 import { SAMPLE_PRODUCT_1 } from '../../utility/constant/test/SampleProduct';
 
+const PRODUCT_QUANTITY = 5
 
 const mockStore = configureStore([]);
 const store = mockStore({
@@ -13,7 +14,7 @@ const store = mockStore({
     products: [
         {
             product:SAMPLE_PRODUCT_1,
-            count: 5
+            count: PRODUCT_QUANTITY
         }
       ,
     ],
@@ -43,7 +44,9 @@ describe('CartScreen', () => {
       );
   
       expect(getByText(SAMPLE_PRODUCT_1.name)).toBeTruthy();
-      expect(getByText('5')).toBeTruthy();
+      expect(getByText(`${(SAMPLE_PRODUCT_1.price * PRODUCT_QUANTITY).toFixed(2)}$`)).toBeTruthy();
+      expect(getByText(`Place Order`)).toBeTruthy();
+      expect(getByText(`${PRODUCT_QUANTITY}`)).toBeTruthy();
     });
   
     it('should dispatch addIncrementCount action on increment product', () => {
